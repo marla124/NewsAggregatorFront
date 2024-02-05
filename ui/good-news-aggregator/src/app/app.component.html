@@ -13,7 +13,7 @@
     <button *ngIf="!authService.isSuccessful" routerLink="/login" mat-button class="example-icon" aria-label="Example icon-button with share icon">
       <span>Log in</span>
     </button>
-    <button *ngIf="authService.isSuccessful" mat-button class="example-icon" routerLink="/logout" aria-label="Example icon-button with share icon">
+    <button *ngIf="authService.isSuccessful" mat-button class="example-icon" routerLink="/" aria-label="Example icon-button with share icon">
       <span>Logout</span>
     </button>
     <button routerLink="/register" mat-button class="example-icon" aria-label="Example icon-button with share icon">

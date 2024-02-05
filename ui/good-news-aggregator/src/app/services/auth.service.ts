@@ -6,6 +6,7 @@ import { TokenStorageService } from './tokenStorage.service';
 import { Router } from '@angular/router';
 import { environment } from '../../environment/environment';
 import { HttpHeaders } from '@angular/common/http';
+import { User } from '../models/user';
 
 const AUTH_API=`${environment.apiUrl}Token/Revoke`
 const httpOptions = {
@@ -21,6 +22,10 @@ export class AuthService {
   constructor(private apiService: ApiService,
     private tokenService:TokenStorageService,private router: Router) {}
 
+    register(email: string, password: string, passwordConfirm: string): Observable<User> {
+      return this.apiService.post('user', { email: email, password: password, passwordConfirm: passwordConfirm });
+    }
+
     login(email: string, password: string) :Observable<Token>{
       return this.apiService.post('token', { email: email, password: password })
       .pipe(
@@ -34,7 +39,7 @@ export class AuthService {
           this.isSuccessful = false;
           this.tokenService.removeToken();
           console.log('Logout successful');
-          this.router.navigateByUrl('/login');
+          this.router.navigateByUrl('/');
         },
         error => {
           console.log(error);
@@ -58,6 +63,8 @@ export class AuthService {
       }
 
     }
+
+
 
 
 }
