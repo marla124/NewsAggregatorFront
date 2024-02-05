@@ -8,6 +8,7 @@ import { MatFormFieldModule} from'@angular/material/form-field';
 import { MatInputModule} from'@angular/material/input';
 import {MatIcon, MatIconModule} from '@angular/material/icon'
 import { MatButton, MatButtonModule } from '@angular/material/button';
+import { TokenStorageService } from '../services/tokenStorage.service';
 
 @Component({
   selector: 'app-login',
@@ -31,12 +32,13 @@ export class LoginComponent implements OnInit {
 
   constructor (private formBuilder: FormBuilder,
     private authService: AuthService,
-    private router: Router){
+    private router: Router, private tokenService:TokenStorageService){
       this.loginForm=this.formBuilder.group({
         email: ['', Validators.required],
         password: ['', Validators.required]
       })
     }
+
     login(): void{
       const value=this.loginForm.value;
 

@@ -21,6 +21,8 @@ export class TokenStorageService {
   }
   public removeToken():void{
     this.currentTokenSubject.next(null);
+    localStorage.removeItem('token');
+
   }
   public setToken(token:Token):void{
     this.currentTokenSubject.next(token);
