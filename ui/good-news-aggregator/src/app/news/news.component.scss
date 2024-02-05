@@ -1,0 +1,29 @@
+div{
+  display: block;
+}
+ul.news li{
+  list-style: none;
+}
+.new-one{
+  margin: 10px 5px;
+  padding: 5px;
+  background-color:aqua;
+}
+
+.selected{
+  background-color: beige;
+}
+
+.header{
+  margin-top: 50px;
+  text-align: center;
+  font-size:200%;
+  font-style: italic;
+}
+/* li.card{
+
+list-style:none;
+display: inline-block;
+max-width: 30%;
+margin: 1.3%;
+} */

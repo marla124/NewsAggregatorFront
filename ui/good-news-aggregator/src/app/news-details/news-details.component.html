@@ -1,0 +1,8 @@
+<div *ngIf="news">
+  <h2>{{news.title}}</h2>
+<!--   <h5 {{news.date}}></h5>
+  <h5 {{news.rate}}></h5> -->
+
+  <div [innerHTML]="news.conentNew"></div>
+  <a href="{{news.sourceUrl}}">Read on source</a>
+</div>

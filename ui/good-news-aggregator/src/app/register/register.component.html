@@ -1,0 +1,29 @@
+<div class="container-reg">
+  <form class="form-home" [formGroup]="registerForm">
+    <h2>Register</h2>
+    <div>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>E-mail</mat-label>
+        <input matInput formControlName='email' required>
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password">
+        <mat-icon matSuffix>lock</mat-icon>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Password Confirmation</mat-label>
+        <input matInput formControlName="password" type="password">
+        <mat-icon matSuffix>lock</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="form-buttons">
+      <button mat-stroked-button color="primary" (click)="register()">Continue</button>
+    </div>
+  </form>
+  </div>

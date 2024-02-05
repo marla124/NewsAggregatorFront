@@ -1,0 +1,25 @@
+
+<main class="main">
+  <mat-toolbar>
+    <button mat-button class="example-icon" aria-label="Example icon-button with menu icon">
+    </button>
+    <span>Good News Aggregator</span>
+    <span class="example-spacer"></span>
+    <button routerLink="/" mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <span>Home</span>
+    </button>
+    <button routerLink="/news" mat-button class="example-icon" aria-label="Example icon-button with share icon">
+      <span>News</span>
+    </button>
+    <button routerLink="/login" mat-button class="example-icon" aria-label="Example icon-button with share icon">
+      <span>Log in</span>
+    </button>
+    <button routerLink="/register" mat-button class="example-icon" aria-label="Example icon-button with share icon">
+      <span>Register</span>
+    </button>
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+
+</main>
+

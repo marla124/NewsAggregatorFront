@@ -1,0 +1,11 @@
+<div>
+  <h3 class="header">{{"Latest news" | uppercase}}</h3>
+
+  <div class="news-list">
+    <mat-grid-list cols="3">
+        <mat-grid-tile *ngFor="let onenew of news" rowHeight="fit">
+          <app-news-preview [news]="onenew"></app-news-preview>
+        </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

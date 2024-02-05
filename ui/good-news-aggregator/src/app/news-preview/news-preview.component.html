@@ -1,0 +1,19 @@
+<div *ngIf="news" class="card">
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{news.title}}</mat-card-title>
+      <mat-card-subtitle>{{news.rate}}</mat-card-subtitle>
+    </mat-card-header>
+<!--     <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="news-preview-image"> -->
+    <mat-card-content>
+      <div [innerHTML]="news.description">
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <div class="example-button-row">
+        <button mat-stroked-button routerLink="/news/{{news.id}}">Details</button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>
