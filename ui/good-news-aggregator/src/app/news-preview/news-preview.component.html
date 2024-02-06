@@ -1,12 +1,15 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,800;0,900;1,400&family=Spectral:wght@800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&family=Playfair+Display:ital,wght@0,500;0,600;0,800;0,900;1,400&family=Spectral:wght@800&display=swap');
+</style>
 <div *ngIf="news" class="card">
 
   <mat-card>
     <mat-card-header>
-      <mat-card-title>{{news.title}}</mat-card-title>
+      <mat-card-title class="card-title">{{news.title}}</mat-card-title>
       <mat-card-subtitle>{{news.rate}}</mat-card-subtitle>
     </mat-card-header>
-<!--     <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="news-preview-image"> -->
-    <mat-card-content>
+    <mat-card-content class="card-content">
       <div [innerHTML]="news.description">
       </div>
     </mat-card-content>

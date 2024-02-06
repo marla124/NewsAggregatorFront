@@ -22,8 +22,8 @@ export class AuthService {
   constructor(private apiService: ApiService,
     private tokenService:TokenStorageService,private router: Router) {}
 
-    register(email: string, password: string, passwordConfirm: string): Observable<User> {
-      return this.apiService.post('user', { email: email, password: password, passwordConfirm: passwordConfirm });
+    register(email: string, password: string, passwordConfirmation: string): Observable<User> {
+      return this.apiService.post('user', { "email": email, "password": password, "passwordConfirmation": passwordConfirmation });
     }
 
     login(email: string, password: string) :Observable<Token>{

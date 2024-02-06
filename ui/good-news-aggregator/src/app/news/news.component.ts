@@ -20,10 +20,10 @@ export class NewsComponent implements OnInit {
   news: News[]|null=[];
   newsCtrl: any;
 
-  constructor(private NewsService: NewsService) {}
+  constructor(private newsService: NewsService) {}
 
   ngOnInit() :void {
-    this.NewsService.getNews().subscribe(news => {
+    this.newsService.getNews().subscribe(news => {
       if (news) {
         this.news = news.sort((a, b) => {
           if (a && b && a.rate && b.rate) {

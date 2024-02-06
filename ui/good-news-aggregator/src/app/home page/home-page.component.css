@@ -1,17 +1,18 @@
-.container{
-  background-image: url(/4861242.jpg);
-}
+
 .header{
   text-align: center;
   margin-top: 300px;
-  font-size: 400%;
+  margin-bottom: 80px;
+  font-size: 900%;
+  font-family: 'Playfair Display', serif;
 }
 .descriptionGNA{
   text-align: center;
-  font-size: 150%;
-  line-height: 30px;
-  margin-top: 50px;
-  margin-left: 19% ;
-  margin-right: 19% ;
+  font-size: 170%;
+  line-height: 40px;
+
+  margin-left: 20% ;
+  margin-right: 20% ;
+  font-family: 'Playfair Display', serif;
 
 }

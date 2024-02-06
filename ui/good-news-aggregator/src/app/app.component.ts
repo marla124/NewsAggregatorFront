@@ -10,12 +10,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './services/auth.service';
 
+
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    imports: [CommonModule, RouterOutlet, NewsComponent, RouterModule, MatToolbarModule, MatButtonModule, FormsModule,HttpClientModule]
+    imports: [CommonModule, RouterOutlet, NewsComponent, RouterModule, MatToolbarModule, MatButtonModule, FormsModule, HttpClientModule]
 })
 
 export class AppComponent {

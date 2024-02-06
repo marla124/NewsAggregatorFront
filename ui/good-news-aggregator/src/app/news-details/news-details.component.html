@@ -1,8 +1,10 @@
-<div *ngIf="news">
-  <h2>{{news.title}}</h2>
-<!--   <h5 {{news.date}}></h5>
-  <h5 {{news.rate}}></h5> -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&family=Playfair+Display:ital,wght@0,500;0,600;0,800;0,900;1,400&family=Spectral:wght@800&display=swap');
+  </style>
+  <div class="container" *ngIf="news">
+    <h2 class="title">{{news.title}}</h2>
+    <h5 class="rate">Rating: {{news.rate}}</h5>
 
-  <div [innerHTML]="news.conentNew"></div>
-  <a href="{{news.sourceUrl}}">Read on source</a>
-</div>
+    <div class="content" [innerHTML]="news.contentNew"></div>
+    <a [href]="news.sourceUrl">Read on source</a>
+  </div>

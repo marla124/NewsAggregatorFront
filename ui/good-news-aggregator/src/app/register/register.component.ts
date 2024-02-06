@@ -54,11 +54,9 @@ export class RegisterComponent implements OnInit {
 
       this.authService.register(email, password, passwordConfirmation).subscribe({
         next: (response) => {
-          // Обработка успешной регистрации
           this.router.navigate(['/home']);
         },
         error: (err) => {
-          // Обработка ошибок регистрации
           console.error(err);
         },
       });

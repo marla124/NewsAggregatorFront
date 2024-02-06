@@ -3,21 +3,25 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { News } from '../models/news';
 import { ActivatedRoute } from '@angular/router';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @Component({
   selector: 'app-news-details',
   standalone: true,
   imports: [
-    CommonModule,
+    CommonModule, MatButtonModule
   ],
   templateUrl: './news-details.component.html',
   styleUrl: './news-details.component.scss',
 })
 export class NewsDetailsComponent implements OnInit {
+
   news:News |undefined|null;
   constructor(private readonly newsService:NewsService,
   private route: ActivatedRoute){}
   ngOnInit(): void {
+
     const id:string|null=this.route.snapshot.paramMap.get('id');
     if(id){
       let news=this.newsService.getNewsById(id).subscribe(news=>{
